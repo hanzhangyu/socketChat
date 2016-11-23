@@ -50,7 +50,7 @@
 
         joke.init=function(selector,context){
             var dom;
-            if(!selector)return []
+            if(!selector)return joke.vDom()
             else if(isString(selector)){
                 selector=selector.trim();
                 if(selector[0]=='<'&&isHtml.test(selector))
@@ -61,7 +61,6 @@
                 }
                 else dom = joke.selectEle(selector)
             } else if(isFunction(selector))return J(document).ready(selector)
-            console.log(joke.vDom(dom,selector))
             return joke.vDom(dom,selector);
         }
 
@@ -83,6 +82,8 @@
     })()
 
     window.Joke=Joke;
-    window.J===undefined&&(window.J=Joke)
+    window.J===undefined&&(window.J=Joke);
+
+    return Joke
 }))
 
