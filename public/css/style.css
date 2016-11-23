@@ -1,9 +1,13 @@
 body, html {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, Arial, sans-serif;
+    font-size:14px;
     overflow: hidden;
 }
 
-ul, body, html {
+ul{
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -11,6 +15,12 @@ ul, body, html {
 body, html, .main, .main-bg {
     width: 100%;
     height: 100%;
+}
+
+.icon{
+    display:inline-block;
+    vertical-align: middle;
+    background-image:url(../images/sprite.png);
 }
 
 .main-bg {
@@ -72,12 +82,57 @@ body, html, .main, .main-bg {
     float: right;
     width: 30px;
     height: 30px;
-    background: url(../images/sprite.png);
+    background: url(../images/sprite.png) 0 -406px;
+    cursor:pointer;
+    position:relative;
+}
+.main-left-title .dropdown .dropdown-list {
+    position:absolute;
+    display: none;
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    min-width: 125px;
+    right: 0;
+    top: 40px;
+    border: 1px solid rgb(214, 214, 214);
+    width: 180px;
+}
+.main-left-title .dropdown.active .dropdown-list{
+    display:block;
 }
 
-.main-left-title .dropdown .dropdown-list {
-    display: none;
+.main-left-title .dropdown-list li{
+    padding: 8px;
+    border-bottom: 1px solid rgb(241, 241, 241);
 }
+.main-left-title .dropdown-list li:last-child{
+    border-bottom:none;
+}
+.main-left-title .dropdown-list li:hover{
+    background:rgb(245, 245, 245);
+}
+.main-left-title .dropdown-list li .icon{
+    width:34px;
+    height:34px;
+}
+.add_chat_icon{
+    background-position:0 -66px;
+}
+.close_desktop_icon{
+    background-position:0 -236px;
+}
+.close_ring_icon{
+    background-position:0 -338px;
+}
+.callback_icon{
+    background-position:0 -134px;
+}
+.logout_icon{
+    background-position:0 -270px;
+}
+
+
+
 
 
 
